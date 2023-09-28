@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Lexend+Exa:wght@300&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,400&family=Ubuntu:wght@300&display=swap");
+
+:root {
+  /* ========== Dark ========== */
+  --theme-bg: #202d36;
+  --theme-bg-header: #2b3743;
+  --theme-bg-text-header: #fff;
+  --theme-bg-input: #2b3743;
+  --theme-bg-text-input: #fff;
+  --theme-bg-card: #2b3743;
+  --theme-card-title: #fff;
+  --theme-card-subtitle: #fff;
+  --theme-bg-btn: #2b3743;
+  --theme-text-btn: #fff;
+
+  /* ========== Light ========== */
+  --theme-bg: #fafafa;
+  --theme-bg-header: #fff;
+  --theme-bg-text-header: #000;
+  --theme-bg-input: #fff;
+  --theme-bg-text-input: #615f5f;
+  --theme-bg-card: #fff;
+  --theme-card-title: #000;
+  --theme-card-subtitle: #000;
+  --theme-bg-btn: #fff;
+  --theme-text-btn: #2b3743;
+
+  /* ========= General ======== */
+  --accent-color: cornflowerblue;
+  --text-color: #444;
+  --width: 300px;
+  --font-size: 0.85em;
+  --background-color: white;
+  --border-color: #ddd;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  transition: 0.3s all ease-in-out;
+}

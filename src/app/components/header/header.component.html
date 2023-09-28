@@ -1,0 +1,18 @@
+<header>
+  <div class="header-container">
+    <nav>
+      <div class="logo">
+        <a routerLink="/"> Where in the world? </a>
+      </div>
+      <div class="mode">
+        <div (click)="setMode()" class="mode-text">
+          <i
+            class="far"
+            [ngClass]="isMode === 'dark' ? 'fa-moon' : 'fa-sun'"
+          ></i>
+          <span class="text">dark mode</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

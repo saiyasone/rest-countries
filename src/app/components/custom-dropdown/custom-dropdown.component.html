@@ -1,0 +1,34 @@
+<div
+  appDropdown
+  (clickOutside)="dropdownOpen = false"
+  class="dropdown-collection"
+>
+  <button
+    class="dropdown-button"
+    aria-haspopup="listbox"
+    aria-labelledby="dropdown-label"
+    (click)="toggleDropdown()"
+  >
+    <span id="dropdown-label"
+      >{{ currentValue ? currentValue.name : title }}
+    </span>
+    <span class="dropdown-value">
+      <i class="fas fa-angle-down"></i>
+    </span>
+  </button>
+  <ul
+    class="dropdown-list"
+    role="listbox"
+    aria-expanded="false"
+    [ngClass]="{ 'dropdown-open': dropdownOpen }"
+  >
+    <li
+      *ngFor="let option of options"
+      [ngClass]="{ selected: currentValue === option }"
+      tabindex="0"
+      (click)="select(option)"
+      role="option"
+      [innerHTML]="option.name"
+    ></li>
+  </ul>
+</div>

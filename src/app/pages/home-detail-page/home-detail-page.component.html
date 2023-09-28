@@ -1,0 +1,80 @@
+<div class="home-detail">
+  <section class="section-action">
+    <button (click)="isBack()">
+      <i class="fas fa-arrow-left"></i>
+      Back
+    </button>
+  </section>
+
+  <section class="section-wrapper">
+    <ng-container *ngIf="country">
+      <div class="section-grid">
+        <div class="img-wrapper">
+          <img [src]="country.flags.png" [alt]="country.name" />
+        </div>
+
+        <div class="info-wrapper">
+          <h2>
+            {{ country.name }}
+          </h2>
+
+          <div class="info-list-container">
+            <div class="info-list">
+              <div class="info-item">
+                <p>native name:</p>
+                <span>{{ country.nativeName }}</span>
+              </div>
+              <div class="info-item">
+                <p>top level domain:</p>
+                <span>{{ country.topLevelDomain }}</span>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="info-item">
+                <p>population:</p>
+                <span>{{ country.population }}</span>
+              </div>
+              <div class="info-item">
+                <p>currencies:</p>
+                <span>{{ country.currencies[0].symbol }}</span>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="info-item">
+                <p>region:</p>
+                <span>{{ country.region }}</span>
+              </div>
+              <div class="info-item">
+                <p>languages:</p>
+                <span>
+                  {{ countryList(country.languages) }}
+                </span>
+              </div>
+            </div>
+            <div class="info-list">
+              <div class="info-item">
+                <p>capital:</p>
+                <span>{{ country.capital }}</span>
+              </div>
+            </div>
+
+            <div class="info-border">
+              <div class="border-wrapper">
+                <div class="border-text">
+                  <h4>border countries:</h4>
+                </div>
+                <div class="border-label">
+                  <ng-container *ngFor="let border of country.borders">
+                    <div class="label">
+                      {{ border }}
+                    </div>
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </section>
+</div>

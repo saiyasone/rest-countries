@@ -1,0 +1,127 @@
+.home-detail {
+  padding: 20px 0;
+}
+.home-detail .section-action {
+  padding-bottom: 20px;
+}
+.section-action button {
+  outline: none;
+  border: 0;
+  padding: 8px 36px;
+  line-height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 15%);
+  cursor: pointer;
+  background-color: var(--theme-bg-btn);
+  color: var(--theme-text-btn);
+}
+.section-action button > i {
+  margin-right: 0.6rem;
+}
+
+.section-wrapper {
+  position: relative;
+  margin-top: 3rem;
+}
+.section-wrapper .section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+@media (max-width: 900px) {
+  .section-wrapper .section-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.section-grid .img-wrapper {
+  max-width: 100%;
+}
+.img-wrapper img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+@media (max-width: 980px) {
+  .img-wrapper img {
+    height: fit-content;
+  }
+}
+
+.section-grid .info-wrapper {
+  padding: 0 40px;
+}
+@media (max-width: 900px) {
+  .section-grid .info-wrapper {
+    padding: 0;
+  }
+}
+
+.info-wrapper h2 {
+  color: var(--theme-card-title);
+}
+.info-wrapper .info-list-container {
+  padding: 30px 0;
+}
+.info-list-container .info-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .info-list-container .info-list {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.info-list .info-item {
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  .info-list .info-item {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.info-item p {
+  text-transform: capitalize;
+  font-weight: 600;
+  color: var(--theme-card-title);
+  margin-right: 0.8rem;
+  text-align: left;
+}
+.info-item span {
+  color: var(--theme-card-subtitle);
+}
+.info-list-container .info-border {
+  margin-top: 4rem;
+}
+.info-border .border-wrapper {
+  display: flex;
+  align-items: center;
+}
+.border-wrapper .border-text {
+  margin-right: 1rem;
+}
+.border-text h4 {
+  color: var(--theme-card-title);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+.border-wrapper .border-label {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.border-label .label {
+  background-color: var(--theme-bg-header);
+  padding: 5px 20px;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 10%);
+  color: var(--theme-card-title);
+}

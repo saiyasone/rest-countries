@@ -1,0 +1,67 @@
+<div class="home-page">
+  <section class="section-form">
+    <div class="form-wrapper">
+      <div class="form-input">
+        <div class="form-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <input
+          #ref
+          (input)="isSearch(ref.value)"
+          type="text"
+          placeholder="Search for a country..."
+        />
+      </div>
+      <div class="form-select">
+        <app-custom-dropdown
+          title="Filter By Region"
+          [options]="options"
+          (currentValueChange)="handlerData($event)"
+        ></app-custom-dropdown>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-countries">
+    <ng-container *ngIf="countries.length; else emptyTemplate">
+      <div class="grid">
+        <ng-container *ngFor="let item of countries; let i = index">
+          <a [routerLink]="item.name" class="grid-item">
+            <div class="c-img">
+              <img [src]="item.flags.png" [alt]="item.name" />
+            </div>
+            <div class="c-body">
+              <h4>
+                {{ item.name }}
+              </h4>
+              <div class="c-subtitle">
+                <p>
+                  Population:
+                  <span>
+                    {{ item.population | number }}
+                  </span>
+                </p>
+                <p>
+                  Region:
+                  <span>
+                    {{ item.region }}
+                  </span>
+                </p>
+                <p>
+                  Capital:
+                  <span>
+                    {{ item.capital }}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </a>
+        </ng-container>
+      </div>
+    </ng-container>
+
+    <ng-template #emptyTemplate>
+      <h2 style="color: #fff">No</h2>
+    </ng-template>
+  </section>
+</div>
