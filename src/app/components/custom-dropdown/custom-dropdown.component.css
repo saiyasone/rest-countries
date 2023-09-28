@@ -37,8 +37,14 @@
 
 .dropdown-value {
   font-weight: 600;
-  /* color: blue; */
 }
+.dropdown-value .dropdown-icon {
+  transition: all 0.3s;
+}
+.dropdown-value .dropdown-icon.active {
+  transform: rotate(180deg);
+}
+
 .dropdown-list {
   display: none;
   background: var(--theme-bg-input);

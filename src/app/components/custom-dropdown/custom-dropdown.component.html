@@ -13,7 +13,10 @@
       >{{ currentValue ? currentValue.name : title }}
     </span>
     <span class="dropdown-value">
-      <i class="fas fa-angle-down"></i>
+      <i
+        class="dropdown-icon fas fa-angle-down"
+        [ngClass]="dropdownOpen ? 'active' : ''"
+      ></i>
     </span>
   </button>
   <ul
